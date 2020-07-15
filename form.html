@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Welcome to Vivant: The Hub for All Things Social Cannabis</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+        <link rel="stylesheet" href="styles/styles.html">
+        <link href="https://fonts.googleapis.com/css2?family=Lato&family=Lato:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/helpers.css">
+        <link rel="stylesheet" href="styles/grid.css">
+    
+        <!-- <link rel="stylesheet" href="styles/debug.css"> -->
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style type="text/css">  
+            body { margin:0; }  
+        </style>  
+        
+        <style>
+    
+    
+    /* Change hero text for desktop vs mobile */
+    @media screen and (max-width: 2024px) { 
+        #about-hero { 
+            background-image: url('static/blue-orange-smoke.jpg');
+            background-size: cover;
+        }
+        #hero-column-1 {
+        background-color: black;
+        padding-left: 10%;
+        }
+        #hero-column-2 {
+        background-color: black;
+        }
+    }
+    @media screen and (max-width: 768px) { 
+        #about-hero { background-image: url('static/blue-orange-smoke.jpg');}
+        #hero-column-1 {
+        background: rgba(0, 0, 0, 0.0);
+        background-size: cover;
+        padding-left: 0%;
+        }
+        #hero-column-2 {
+        }
+    }
+
+    /* Change Action section for desktop vs mobile */
+    @media screen and (max-width: 2024px) { 
+        #action-section { 
+            background-image: url('static/night-sky.jpg');
+            background-size: cover;
+        }
+    }
+    @media screen and (max-width: 768px) { 
+        #action-section { background-image: url('static/night-sky.jpg');}
+        #hero-column-1 {
+        background: rgba(0, 0, 0, 0.0);
+        background-size: cover;
+        padding-left: 0%;
+        }
+        #hero-column-2 {
+        }
+    }
+    
+    .navbar-item {
+        color: white;
+        font-size: large;
+    }
+    
+    .hero-body {
+        background-color: black;
+    }
+    
+    .title {
+        font-family: 'Lato', sans-serif;
+        font-weight: 800;
+    }
+    
+    /* #hero-text {
+        line-height: 7vw;
+        letter-spacing: 5px;
+        font-size: 30px;
+    } */
+    
+    .button {
+        align-items: center;
+        width: 20rem;
+        font-size: 20px;
+        font-family: 'Lato', sans-serif;
+    }
+    
+    .button:hover {
+        background-color: rgb(224, 223, 223);
+    }
+    
+    #hero-text-mid {
+        color: rgb(0, 197, 126);
+    }
+    
+    #navbar-logo {
+        padding: 0 0.75rem 0 0.75rem; 
+    }
+    
+    #top-login {
+        width: auto;
+        font-size: 16px;
+    }
+    
+    #top-get-started {
+        width: auto;
+        font-size: 16px;
+    }
+    
+    #form-submit {
+        width: auto;
+        font-size: 16px;
+    }
+        </style>
+    
+    
+    </head>
+    
+<body>
+     <!-- .header -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <div class="navbar-item" width="5%"></div>
+            <a class="navbar-item" href="https://bulma.io" id="navbar-logo">
+                <img src="static/vivant-logo-white.png" height="100%">
+            </a>
+        
+            <div role="button" class="navbar-burger burger"onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </div>
+        </div>
+        
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <div class="navbar-item"></div>
+            </div>
+            <div class="navbar-item desktop" style="width: 40%;">
+                <div class="field" style="width: 90%;">
+                    <p class="control has-icons-left has-icons-right">
+                        <input class="input" type="text" placeholder="Search Events..." width="250">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </p>
+                </div>
+            </div>   
+
+            <div class="navbar-end">
+                <a class="navbar-item has-text-black">About</a>
+                <a class="navbar-item has-text-black">Events</a>
+                <a class="navbar-item has-text-black">Host</a> 
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-light" id="top-login">
+                            Log in
+                        </a>
+                        <a class="button is-primary" id="top-get-started">
+                            <strong>Get Started</strong>
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar-item" width="5%"></div>
+            </div>
+        </div>
+    </nav>
+    <!-- /.header -->
+
+
+    <!-- Sub-hero -->
+    <section class="section has-background-light">
+        <div class="container">
+            <h2 class="title is-size-2 has-text-centered">Thanks for Connecting!</h2>
+            <h3 class="subtitle is-size-4 has-text-centered">We are excited to share our progress with you.</h3>
+        </div>
+    </section>
+    <!-- /Sub-hero -->
+
+
+    <!-- Main -->
+    <section class="section">
+        <div class="container">
+            <h2 class="title is-size-3">In the Meantime, Help us Launch the Right Way.</h2>
+            <h3 class="subtitle is-size-5">As a brand-new startup, we could use your feedback to create the best experience possible. Fill out the form below and let your voice be heard in building the future of social cannabis.</h3><br>
+        </div>
+        <div class="container has-background-light">
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label class="label">What types of cannabis-based events are you most interested in?</label>
+                </div>
+                <div class="field-body">
+                    <div class="field-body">
+                        <div class="field is-narrow">
+                            <div class="control">
+                                <label class="checkbox">
+                                <input type="checkbox" name="member">
+                                Concerts
+                                </label>
+                                <label class="checkbox">
+                                <input type="checkbox" name="member">
+                                Comedy Shows
+                                </label>
+                                <label class="checkbox">
+                                <input type="checkbox" name="member">
+                                Bud Tastings
+                                </label>
+                                <label class="checkbox">
+                                <input type="checkbox" name="member">
+                                Wellness & Yoga Events
+                                </label>
+                                <label class="checkbox">
+                                <input type="checkbox" name="member">
+                                Food-Related Events
+                                </label>
+                                <label class="checkbox">
+                                <input type="checkbox" name="member">
+                                Educational Events
+                                </label>
+                                <label class="checkbox">
+                                <input type="checkbox" name="member">
+                                Casual Events & Parties
+                                </label>
+                                <label class="checkbox">
+                                <input type="checkbox" name="member">
+                                Other
+                                <input type="text" name="other-text">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Locations -->
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label class="label">What neighborhoods of Denver are you most interested in having events?</label>
+                </div>
+                <div class="field-body">
+                    <div class="field-body">
+                        <div class="field is-narrow">
+                            <div class="control">
+                                <label class="checkbox">
+                                <input type="checkbox" name="member">
+                                River North (RiNO)
+                                </label>
+                                <label class="checkbox">
+                                <input type="checkbox" name="member">
+                                Lower Downtown (LoDo)
+                                </label>
+                                <label class="checkbox">
+                                <input type="checkbox" name="member">
+                                Lower Highlands (LoHi)
+                                </label>
+                                <label class="checkbox">
+                                <input type="checkbox" name="member">
+                                South Broadway
+                                </label>
+                                <label class="checkbox">
+                                <input type="checkbox" name="member">
+                                City Park
+                                </label>
+                                <label class="checkbox">
+                                <input type="checkbox" name="member">
+                                Other
+                                <input type="text" name="other-text">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dispensary -->
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label class="label">What is your most frequented cannabis dispensary?</label>
+                </div>
+                <div class="field-body">
+                    <div class="field-body">
+                        <div class="field is-narrow">
+                            <div class="control">
+                                <label class="checkbox">
+                                <input type="checkbox" name="member">
+                                Native Roots
+                                </label>
+                                <label class="checkbox">
+                                <input type="checkbox" name="member">
+                                The Green Solution
+                                </label>
+                                <label class="checkbox">
+                                <input type="checkbox" name="member">
+                                LivWell
+                                </label>
+                                <label class="checkbox">
+                                <input type="checkbox" name="member">
+                                Charlotte's Web
+                                </label>
+                                <label class="checkbox">
+                                <input type="checkbox" name="member">
+                                Terrapin Care Station
+                                </label>
+                                <label class="checkbox">
+                                <input type="checkbox" name="member">
+                                Green Dragon
+                                </label>
+                                <label class="checkbox">
+                                <input type="checkbox" name="member">
+                                LightShade
+                                </label>
+                                <label class="checkbox">
+                                <input type="checkbox" name="member">
+                                Other
+                                <input type="text" name="other-text">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <!-- Dispensary -->
+        <div class="container has-background-light">
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label class="label">Would you be interesting in being a Beta tester of Vivant’s platform? </label>
+                </div>
+                <div class="field-body">
+                    <div class="field-body">
+                        <div class="field is-narrow">
+                            <div class="control">
+                                <label class="radio">
+                                    <input type="radio" name="member">
+                                Yes
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="member">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>   
+
+        <div class="container has-background-light">
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label class="label">What is your zip code?</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control">
+                            <input class="input" type="number" placeholder="Zip Code">
+                        </div>
+                        <p class="help">Optional</p>
+                    </div>
+                </div>
+            </div>    
+        </div>
+            
+        <div class="container has-background-light">
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label class="label">What is your phone number?</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control">
+                            <input class="input" type="number" placeholder="Phone Number">
+                        </div>
+                        <p class="help">Optional</p>
+                    </div>
+                </div>
+            </div>  
+        
+
+            <div class="field-body">
+                <div class="field">
+                    <div class="control">
+                        <button class="button is-primary">
+                            Submit
+                    </button>
+                </div>
+                </div>
+            </div>  
+        </div>
+    </section>
+
+
+    <!-- /Footer -->
+    <footer class="footer has-background-dark" style="padding: 20px 0 10px 30px;">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-1"></div>
+                <div class="column">
+                    <img src="static/vivant-logo-dark.png" width="120">
+                    <a href="">
+                        <p>About</p>
+                    </a>
+                    <a href="">
+                        <p>Events</p>
+                    </a>
+                    <a href="">
+                        <p>For Hosts</p>
+                    </a>
+                    <a href="">
+                        <p>For Performers</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container has-background-dark"> 
+            <p class="has-text-grey has-text-centered">© 2020 Vivant Social, Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- /Footer end -->
+</body>

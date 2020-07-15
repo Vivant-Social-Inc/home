@@ -1,0 +1,93 @@
+ Old Navbar: 
+ 
+ <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://bulma.io">
+                <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+            </a>
+      
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <div class="navbar-item is-spaced-2rem desktop">
+                    <div class="field">
+                        <p class="control has-icons-left has-icons-right">
+                            <input class="input" type="text" placeholder="Search Events...">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-search"></i>
+                            </span>
+                        </p>
+                    </div>
+                </div>   
+            </div>
+
+            <div class="navbar-end">
+                <a class="navbar-item has-text-black">About</a>
+                <a class="navbar-item has-text-black">Events</a>
+                <a class="navbar-item has-text-black">Host</a> 
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-light">
+                            Log in
+                        </a>
+                        <a class="button is-primary">
+                            <strong>Get Started</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+    </nav>
+
+
+ 
+ <div class="columns is-mobile is-marginless heading has-text-weight-bold">
+                <div class="column is-offset-1">
+                    <p class="navbar-brand">VIVANT</p>
+                </div>
+                <div class="column is-two-fifths">
+                    <div class="field">
+                        <p class="control has-icons-left has-icons-right">
+                            <input class="input" type="text" placeholder="Search Events...">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-search"></i>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="column"></div>
+                <div class="navbar-menu">
+                    <a class="navbar-item">ABOUT</a>
+                    <a class="navbar-item">EVENTS</a>
+                    <a class="navbar-item">HOST</a>
+                    <a class="navbar-item">LOG IN</a>
+                    <a href="" class="button is-primary">GET STARTED</a>
+                </div>
+                <div class="navbar-burger mobile">
+                    
+                </div>
+                <div class="column is-size-1"></div>
+            </div>
+
+
+
+Original Hero with Festival of Colors img.
+NOTE: #hero-text had a background tag with opacity 60%
+
+<section class="hero is-fullheight">
+        <div class="hero-body">
+            <div class="is-overlay has-text-centered" style="top: 200px; left: 20%px;">
+                <h1 class="title has-text-white-ter" id="hero-text">The Source of <br> All Cannabis <br> Friendly Events</h1>
+                <div class="button is-primary">
+                    <strong>Coming Soon</strong>
+                </div>
+            </div>
+        </div>
+</section>
