@@ -1,188 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Welcome to Vivant: The Hub for All Things Social Cannabis</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css">
-        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-        <link rel="stylesheet" href="styles/styles.html">
-        <link href="https://fonts.googleapis.com/css2?family=Lato&family=Lato:wght@300&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles/helpers.css">
-        <link rel="stylesheet" href="styles/grid.css">
-    
-        <!-- <link rel="stylesheet" href="styles/debug.css"> -->
-    
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style type="text/css">  
-            body { margin:0; }  
-        </style>  
-        
-        <style>
-    
-    
-    /* Change hero text for desktop vs mobile */
-    @media screen and (max-width: 2024px) { 
-        #about-hero { 
-            background-image: url('static/blue-orange-smoke.jpg');
-            background-size: cover;
-        }
-        #hero-column-1 {
-        background-color: black;
-        padding-left: 10%;
-        }
-        #hero-column-2 {
-        background-color: black;
-        }
-    }
-    @media screen and (max-width: 768px) { 
-        #about-hero { background-image: url('static/blue-orange-smoke.jpg');}
-        #hero-column-1 {
-        background: rgba(0, 0, 0, 0.0);
-        background-size: cover;
-        padding-left: 0%;
-        }
-        #hero-column-2 {
-        }
-    }
+{% extends 'base.html' %}
 
-    /* Change Action section for desktop vs mobile */
-    @media screen and (max-width: 2024px) { 
-        #action-section { 
-            background-image: url('static/night-sky.jpg');
-            background-size: cover;
-        }
-    }
-    @media screen and (max-width: 768px) { 
-        #action-section { background-image: url('static/night-sky.jpg');}
-        #hero-column-1 {
-        background: rgba(0, 0, 0, 0.0);
-        background-size: cover;
-        padding-left: 0%;
-        }
-        #hero-column-2 {
-        }
-    }
-    
-    .navbar-item {
-        color: white;
-        font-size: large;
-    }
-    
-    .hero-body {
-        background-color: black;
-    }
-    
-    .title {
-        font-family: 'Lato', sans-serif;
-        font-weight: 800;
-    }
-    
-    /* #hero-text {
-        line-height: 7vw;
-        letter-spacing: 5px;
-        font-size: 30px;
-    } */
-    
-    .button {
-        align-items: center;
-        width: 20rem;
-        font-size: 20px;
-        font-family: 'Lato', sans-serif;
-    }
-    
-    .button:hover {
-        background-color: rgb(224, 223, 223);
-    }
-    
-    #hero-text-mid {
-        color: rgb(0, 197, 126);
-    }
-    
-    #navbar-logo {
-        padding: 0 0.75rem 0 0.75rem; 
-    }
-    
-    #top-login {
-        width: auto;
-        font-size: 16px;
-    }
-    
-    #top-get-started {
-        width: auto;
-        font-size: 16px;
-    }
-    
-    #form-submit {
-        width: auto;
-        font-size: 16px;
-    }
-        </style>
-</head>
+{% block content %}
 
 
-<body>
-    <!-- .header -->
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <div class="navbar-item" width="5%"></div>
-            <a class="navbar-item" href="https://bulma.io" id="navbar-logo">
-                <img src="static/vivant-logo-white.png" height="100%">
-            </a>
-        
-            <div role="button" class="navbar-burger burger"onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </div>
-        </div>
-        
-        <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-start">
-                <div class="navbar-item"></div>
-            </div>
-            <div class="navbar-item desktop" style="width: 40%;">
-                <div class="field" style="width: 90%;">
-                    <p class="control has-icons-left has-icons-right">
-                        <input class="input" type="text" placeholder="Search Events..." width="250">
-                        <span class="icon is-small is-left">
-                            <i class="fas fa-search"></i>
-                        </span>
-                    </p>
-                </div>
-            </div>   
-
-            <div class="navbar-end">
-                <a class="navbar-item has-text-black">About</a>
-                <a class="navbar-item has-text-black" href="#stay-connected-section">Events</a>
-                <a class="navbar-item has-text-black">Host</a> 
-                <div class="navbar-item">
-                    <div class="buttons">
-                        <a class="button is-light" id="top-login" href="#stay-connected-section">
-                            Log in
-                        </a>
-                        <a class="button is-primary" id="top-get-started" href="#stay-connected-section">
-                            <strong>Get Started</strong>
-                        </a>
-                    </div>
-                </div>
-                <div class="navbar-item" width="5%"></div>
-            </div>
-        </div>
-    </nav>
-    <!-- /.header -->
-
-
-    <!-- /Hero -->
+<!-- /Hero -->
     <div class="section has-background-light" id="about-hero">
         <div class="container">
             <h1 class="title is-size-1 has-text-centered has-text-white" style="top: 5%; left: 20%px; padding: 5%;">HOST RESOURCES</h1>
         </div>
     </div>
-    <!-- /.Hero -->
+<!-- /.Hero -->
 
 
-    <!-- /Main -->
+<!-- /Main -->
     <div class="section">
         <div class="container" style="margin-bottom: 5%;">
             <h2 class="title is-size-2 has-text-centered">Vivant makes it easy to bring people together</h2>
@@ -251,10 +81,10 @@
             </div>
         </div>
     </div>
-    <!-- /.Main -->
+<!-- /.Main -->
 
 
-    <!-- /Para -->
+<!-- /Para -->
     <section class="section has-background-dark">
         <div class="container">
             <div class="columns">
@@ -279,17 +109,17 @@
     <!-- /.Para -->
 
 
-    <!-- .stay connected form -->
+<!-- .stay connected form -->
     <section class="section" id="stay-connected-section">
         <div class="container has-text-centered">
-            <h1 class="title is-size-2 has-text-centered">Social Consumption at its Finest</h1>
-            <p class="paragraph is-size-5 notification">Connect with us to get started building the future of social cannabis.</p>
+            <h1 class="title is-size-2 has-text-centered has-text-white">Social Consumption at its Finest</h1>
+            <p class="paragraph is-size-5 has-text-white">Connect with us to get started building the future of social cannabis.</p>
         </div>
         <br>
-        <div class="container">
+        <div class="container" style="padding-right: 10%;">
             <div class="field is-horizontal">
                 <div class="field-label is-normal">
-                    <label class="label">Info</label>
+                    <label class="label has-text-white">Info</label>
                 </div>
                 <div class="field-body">
                     <div class="field">
@@ -312,7 +142,7 @@
                 </div>
                 <div class="field is-horizontal">
                 <div class="field-label is-normal">
-                    <label class="label">Subject</label>
+                    <label class="label has-text-white">Subject</label>
                 </div>
                 <div class="field-body">
                     <div class="field">
@@ -325,7 +155,7 @@
                 
             <div class="field is-horizontal">
                 <div class="field-label is-normal">
-                    <label class="label">Question</label>
+                    <label class="label has-text-white">Question</label>
                 </div>
                 <div class="field-body">
                     <div class="field">
@@ -354,34 +184,4 @@
     </section>
     <!-- /.stay connected -->
 
-
-    <!-- .footer -->
-    <footer class="footer has-background-dark" style="padding: 20px 0 10px 30px;">
-        <div class="container">
-            <div class="columns">
-                <div class="column is-1"></div>
-                <div class="column">
-                    <img src="static/vivant-logo-dark.png" width="120">
-                    <a href="">
-                        <p>About</p>
-                    </a>
-                    <a href="">
-                        <p>Events</p>
-                    </a>
-                    <a href="">
-                        <p>For Hosts</p>
-                    </a>
-                    <a href="">
-                        <p>For Performers</p>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="container has-background-dark"> 
-            <p class="has-text-grey has-text-centered">© 2020 Vivant Social, Inc. All Rights Reserved.</p>
-        </div>
-    </footer>
-    <!-- /.footer -->
-
-
-</body>
+{% endblock %}
