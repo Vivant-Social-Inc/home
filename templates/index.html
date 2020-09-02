@@ -1,160 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Vivant: The Hub for All Things Social Cannabis</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <link rel="stylesheet" href="styles/styles.html">
-    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Lato:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/helpers.css">
-    <link rel="stylesheet" href="styles/grid.css">
+{% extends 'base.html' %}
 
-    <!-- <link rel="stylesheet" href="styles/debug.css"> -->
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style type="text/css">  
-        body { margin:0; }  
-    </style>  
-    
-    <style>
-
-/* Change hero text for desktop vs mobile */
-.hero-body {
-    background-color: black;
-}
-
-@media screen and (max-width: 2024px) { 
-    .hero-body { 
-        background-color: black;
-    }
-    #hero-column-1 {
-    background-color: black;
-    padding-left: 10%;
-    }
-    #hero-column-2 {
-    background-color: black;
-    }
-}
-@media screen and (max-width: 768px) { 
-    .hero-body { background-image: url('static/smoke-break.jpg');}
-    #hero-column-1 {
-    background: rgba(0, 0, 0, 0.0);
-    background-size: cover;
-    padding-left: 0%;
-    }
-    #hero-column-2 {
-    }
-}
-
-.navbar-item {
-    color: white;
-    font-size: large;
-}
-
-.title {
-    font-family: 'Lato', sans-serif;
-    font-weight: 800;
-}
-
-/* #hero-text {
-    line-height: 7vw;
-    letter-spacing: 5px;
-    font-size: 30px;
-} */
-
-.button {
-    align-items: center;
-    width: 20rem;
-    font-size: 20px;
-    font-family: 'Lato', sans-serif;
-}
-
-.button:hover {
-    background-color: rgb(224, 223, 223);
-}
-
-#hero-text-mid {
-    color: rgb(0, 197, 126);
-}
-
-#navbar-logo {
-    padding: 0 0.75rem 0 0.75rem; 
-}
-
-#top-login {
-    width: auto;
-    font-size: 16px;
-}
-
-#top-get-started {
-    width: auto;
-    font-size: 16px;
-}
-
-#form-submit {
-    width: auto;
-    font-size: 16px;
-}
-    </style>
-
-
-</head>
-
-
-<body>
-    <!-- .header -->
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <div class="navbar-item" width="5%"></div>
-            <a class="navbar-item" href="https://bulma.io" id="navbar-logo">
-                <img src="static/vivant-logo-white.png" height="100%">
-            </a>
-        
-            <div role="button" class="navbar-burger burger"onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </div>
-        </div>
-        
-        <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-start">
-                <div class="navbar-item"></div>
-            </div>
-            <div class="navbar-item desktop" style="width: 40%;">
-                <div class="field" style="width: 90%;">
-                    <p class="control has-icons-left has-icons-right">
-                        <input class="input" type="text" placeholder="Search Events..." width="250">
-                        <span class="icon is-small is-left">
-                            <i class="fas fa-search"></i>
-                        </span>
-                    </p>
-                </div>
-            </div>   
-
-            <div class="navbar-end">
-                <a class="navbar-item has-text-black">About</a>
-                <a class="navbar-item has-text-black" href="#stay-connected-section">Events</a>
-                <a class="navbar-item has-text-black">Host</a> 
-                <div class="navbar-item">
-                    <div class="buttons">
-                        <a class="button is-light" id="top-login" href="#stay-connected-section">
-                            Log in
-                        </a>
-                        <a class="button is-primary" id="top-get-started" href="#stay-connected-section">
-                            <strong>Get Started</strong>
-                        </a>
-                    </div>
-                </div>
-                <div class="navbar-item" width="5%"></div>
-            </div>
-        </div>
-    </nav>
-    <!-- /.header -->
-
-
+{% block content %}
     <!-- .hero -->
     <section class="hero is-large">
         <div class="hero-body" style="padding: 0 24px 24px 24px;">
@@ -169,7 +15,7 @@
                     </a>
                 </div>
                 <div class="column desktop" id="hero-column-2">
-                    <img src="static/smoke-break.jpg">
+                    <!-- <img src="static/smoke-break.jpg"> -->
                 </div>
             </div>
         </div>
@@ -228,7 +74,7 @@
                     <h2 class="title is-size-2 has-text-black">Want to Host an Event? We can Help.</h2>
                     <p class="content is-medium">Our partners know all the ins and outs of getting set up as a cannabis event space. We will provide support with everything from compliance to ticketing to marketing. Join our growing network of locations, performers, and attendees!</p>
                     <div class="container has-text-centered">
-                        <a href="/#stay-connected" class="button is-primary">Host an Event</a>
+                        <a href="/host" class="button is-primary">Host an Event</a>
                     </div>
                 </div>
                 <div class="column is-1"></div>
@@ -239,12 +85,12 @@
 
 
 
-    <!-- .stay connected -->
-    <section class="section" id="stay-connected-section">
+    <!-- .stay connected. Hidden because of MailChimp input on Base.html -->
+    <!-- <section class="section" id="stay-connected-section">
         <div class="container has-text-centered">
-            <h1 class="title is-size-2 has-text-centered">STAY CONNECTED</h1>
-            <p class="content is-medium notification">We are a young & fast moving cannabis startup and can’t wait to launch with the most premiere cannabis events in the world.</p>
-            <p class="paragraph is-size-5">Sign Up for Early Access to Exclusive Cannabis Events and Deals</p>
+            <h1 class="title is-size-2 has-text-centered has-text-white">STAY CONNECTED</h1>
+            <p class="content is-medium has-text-white">We are a young & fast moving cannabis startup and can’t wait to launch with the most premiere cannabis events in the world.</p>
+            <p class="paragraph is-size-5 has-text-white">Sign Up for Early Access to Exclusive Cannabis Events and Deals</p>
         </div>
         <br>
         <div class="columns">
@@ -277,39 +123,9 @@
             </div>
             <div class="column"></div>
         </div>
-    </section>
+    </section> -->
     <!-- /.stay connected -->
 
+{% endblock %}
 
-    
-    <!-- .footer -->
-    <footer class="footer has-background-dark" style="padding: 20px 0 10px 30px;">
-        <div class="container">
-            <div class="columns">
-                <div class="column is-1"></div>
-                <div class="column">
-                    <img src="static/vivant-logo-dark.png" width="120">
-                    <a href="">
-                        <p>About</p>
-                    </a>
-                    <a href="">
-                        <p>Events</p>
-                    </a>
-                    <a href="">
-                        <p>For Hosts</p>
-                    </a>
-                    <a href="">
-                        <p>For Performers</p>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="container has-background-dark"> 
-            <p class="has-text-grey has-text-centered">© 2020 Vivant Social, Inc. All Rights Reserved.</p>
-        </div>
-    </footer>
-    <!-- /.footer -->
-
-
-</body>
-</html>
+ 
