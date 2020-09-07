@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Vivant: The Hub for All Things Social Cannabis</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="styles/styles.html">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/helpers.css">
+    <link rel="stylesheet" href="styles/grid.css">
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+    
+    <!-- <link rel="stylesheet" href="styles/debug.css"> -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177217082-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-177217082-1');
+    </script>
+
+
+
+    <!-- Mailchimp Style Embed -->
+   <style type="text/css">
+        #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+        /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+        We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+    </style>
+    <!-- Mailchimp style end -->
+
+    <style type="text/css">  
+        body { margin:0; }  
+    </style>  
+    
+    <style>
+
+/* Change hero text for desktop vs mobile */
+.hero-body {
+    background-color: black;
+}
+
+@media screen and (max-width: 2024px) { 
+    .hero-body { 
+        background-color: black;
+    }
+    #about-hero { 
+            background-image: url('images/blue-orange-smoke.jpg');
+            background-size: cover;
+    }
+    #action-section { 
+            background-image: url('images/night-sky.jpg');
+            background-size: cover;
+    }
+    #stay-connected-section { 
+            /* background-image: url('images/night-sky.jpg'); */
+            background-size: cover;
+    }
+    #hero-column-1 {
+    background-color: black;
+    padding-left: 10%;
+    }
+    #hero-column-2 {
+        background-image: url('images/smoke-break.jpg');
+        background-size: cover;
+    }
+@media screen and (max-width: 768px) { 
+    .hero-body { background-image: url('images/smoke-break.jpg');}
+    #about-hero { background-image: url('images/blue-orange-smoke.jpg');}
+    #action-section { background-image: url('images/night-sky.jpg');}
+    /* #stay-connected-section { background-image: url('images/night-sky.jpg');} */
+    #hero-column-1 {
+    background: rgba(0, 0, 0, 0.0);
+    background-size: cover;
+    padding-left: 0%;
+    }
+    #hero-column-2 {
+        background: rgba(0, 0, 0, 0.0);
+        width: 0px; 
+    }
+}
+
+.navbar-item {
+    color: white;
+    font-size: large;
+}
+
+.title {
+    font-family: 'Lato', sans-serif;
+    font-weight: 800;
+}
+
+/* #hero-text {
+    line-height: 7vw;
+    letter-spacing: 5px;
+    font-size: 30px;
+} */
+
+.button {
+    align-items: center;
+    width: 20rem;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+}
+
+.button:hover {
+    background-color: rgb(224, 223, 223);
+}
+
+#hero-text-mid {
+    color: rgb(0, 197, 126);
+}
+
+#navbar-logo {
+    padding: 0 0.75rem 0 0.75rem; 
+}
+
+#top-login {
+    width: auto;
+    font-size: 16px;
+}
+
+#top-get-started {
+    width: auto;
+    font-size: 16px;
+}
+
+#form-submit {
+    width: auto;
+    font-size: 16px;
+}
+    </style>
+
+
+</head>
+
+
+<body>
+    <!-- .header -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <div class="navbar-item" width="5%"></div>
+            <a class="navbar-item" href="/" id="navbar-logo">
+                <img src="images/vivant-logo-white.png" height="100%">
+            </a>
+        
+            <div role="button" class="navbar-burger burger"onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </div>
+        </div>
+        
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <div class="navbar-item"></div>
+            </div>
+            <div class="navbar-item desktop" style="width: 40%;">
+                <div class="field" style="width: 90%;">
+                    <p class="control has-icons-left has-icons-right">
+                        <input class="input" type="text" placeholder="Search Events..." width="250">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </p>
+                </div>
+            </div>   
+
+            <div class="navbar-end">
+                <a href="/about" class="navbar-item has-text-black">About</a>
+                <a class="navbar-item has-text-black" href="#stay-connected-section">Events</a>
+                <a class="navbar-item has-text-black" href="/host">Host</a> 
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-light" id="top-login" href="#stay-connected-section">
+                            Log in
+                        </a>
+                        <a class="button is-primary" id="top-get-started" href="#stay-connected-section">
+                            <strong>Get Started</strong>
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar-item" width="5%"></div>
+            </div>
+        </div>
+    </nav>
+<!-- /.header -->
+
+
+<!-- /Hero -->
+    <div class="section has-background-light" id="about-hero">
+        <div class="container">
+            <h1 class="title is-size-1 has-text-centered has-text-white" style="top: 5%; left: 20%px; padding: 5%;">HOST RESOURCES</h1>
+        </div>
+    </div>
+<!-- /.Hero -->
+
+
+<!-- /Main -->
+    <div class="section">
+        <div class="container" style="margin-bottom: 5%;">
+            <h2 class="title is-size-2 has-text-centered">Vivant makes it easy to bring people together</h2>
+            <h3 class="subtitle is-size-4" style="padding: 10px 3% 0 8%;">With everything you need to build and manage your events, your teams can seamlessly engage your community.</h3>
+        </div>
+        <div class="container">
+            <div class="columns">
+
+                <div class="column">
+                    <article class="media notification">
+                        
+                        <article class="media">
+                            <figure class="media-left">
+                                <span class="icon has-text-dark">
+                                    <i class="fas fa-university"></i>
+                                </span>
+                            </figure>
+                            <div class="media-content">
+                                <div class="content">
+                                    <h2 class="subtitle is-size-4" style="color: rgb(2, 177, 113);">Set Up & Compliance</h2>
+                                    <p class="is-size-6">We provide you the know-how to start throwing events & stay compliant with social consumption laws.</p>
+                                </div>
+                            </div>
+                        </article>
+                    </article>
+                </div>
+
+                <div class="column">
+                    <article class="media notification">
+                        
+                        <article class="media">
+                            <figure class="media-left">
+                                <span class="icon has-text-dark">
+                                    <i class="fas fa-code"></i>
+                                </span>
+                            </figure>
+                            <div class="media-content">
+                                <div class="content">
+                                    <h2 class="subtitle is-size-4" style="color: rgb(2, 177, 113);">Technology & Data</h2>
+                                    <p class="is-size-6">Simple event management, ticket sales, and customer engagement data through our APIs.</p>
+                                </div>
+                            </div>
+                        </article>
+                    </article>
+                </div>
+
+                <div class="column">
+                    <article class="media notification">
+                        
+                        <article class="media">
+                            <figure class="media-left">
+                                <span class="icon has-text-dark">
+                                    <i class="fas fa-chart-line" aria-hidden="true"></i>
+                                </span>
+                            </figure>
+                            <div class="media-content">
+                                <div class="content">
+                                    <h2 class="subtitle is-size-4" style="color: rgb(2, 177, 113);">Generate Revenue & Customer Leads</h2>
+                                    <p class="is-size-6">Host events to sell tickets for additional revenue streams or to introduce your customers to new products.</p>
+                                </div>
+                            </div>
+                        </article>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+    </div>
+<!-- /.Main -->
+
+
+<!-- /Para -->
+    <section class="section has-background-dark">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-1"></div>
+                <div class="column">
+                    <h2 class="title is-size-2" style="color: rgb(0, 197, 126);">Start with a Vision...</h2>
+                    <p class="content is-size-6 has-text-white">...a tailored event or unique experience. Now what do you need to execute? This is where we come in. Upon connecting with us directly, you will have access to location scouting, social license procurement, on-premise cannabis sales, security, and much more. Then, we’ll gladly host your event’s landing page - information, ticketing sales, etc. while offering you exposure to our full network of attendees. This will allow you to expand your ticket sales as well as improve your reach to the individuals and brands perusing our targeted website.
+                    </p>
+                    <div class="container has-text-centered">
+                        <a href="#stay-connected-section" class="button is-outlined">Connect with Us</a>
+                    </div>
+                </div>
+                <div class="column">
+                    <figure class="image center">
+                        <img src="images/color-party.jpg" style="max-width: 500px;">
+                    </figure>
+                </div>
+                <div class="column is-1"></div>
+            </div>
+        </div>
+    </section>
+    <!-- /.Para -->
+
+
+<!-- .stay connected form -->
+    <!-- <section class="section" id="stay-connected-section">
+        <div class="container has-text-centered">
+            <h1 class="title is-size-2 has-text-centered has-text-white">Social Consumption at its Finest</h1>
+            <p class="paragraph is-size-5 has-text-white">Connect with us to get started building the future of social cannabis.</p>
+        </div>
+        <br>
+        <div class="container" style="padding-right: 10%;">
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label class="label has-text-white">Info</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                    <p class="control is-expanded has-icons-left">
+                        <input class="input" type="text" placeholder="Name">
+                        <span class="icon is-small is-left">
+                        <i class="fas fa-user"></i>
+                        </span>
+                    </p>
+                    </div>
+                    <div class="field">
+                    <p class="control is-expanded has-icons-left has-icons-right">
+                        <input class="input" type="email" placeholder="Email">
+                        <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                        </span>
+                    </p>
+                    </div>
+                </div>
+                </div>
+                <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label class="label has-text-white">Subject</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                    <div class="control">
+                        <input class="input" type="text" placeholder="e.g. Partnership opportunity">
+                    </div>
+                    </div>
+                </div>
+            </div>
+                
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label class="label has-text-white">Question</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                    <div class="control">
+                        <textarea class="textarea" placeholder="How can we help you?"></textarea>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                
+                <div class="field is-horizontal">
+                <div class="field-label">
+                    </div>
+                <div class="field-body">
+                    <div class="field">
+                    <div class="control">
+                        <button class="button is-primary">
+                        Submit
+                        </button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- /.stay connected -->
+
+    <!-- Stay Connected Section -->
+<!-- Begin Mailchimp Signup Form -->
+<section class="section" id="stay-connected-section">
+    <div class="container has-text-centered">
+        <h1 class="title is-size-2 has-text-centered has-text-dark">STAY CONNECTED</h1>
+        <p class="content is-medium has-text-dark">We are a young & fast moving cannabis startup and can’t wait to launch with the most premiere cannabis events in the world.</p>
+        <p class="paragraph is-size-5 has-text-dark">Sign Up for Early Access to Exclusive Cannabis Events and Deals</p>
+        <p class="paragraph is-size-6 has-text-dark">For Partnerships: <a href="mailto: Info@Vivant.social">Info@Vivant.social</a></p>
+    </div>
+    <br>
+    <div id="mc_embed_signup" style="padding: 0 20%;">
+        <form action="https://social.us17.list-manage.com/subscribe/post?u=cbf1ca733db13e75e82da3979&amp;id=82afd47565" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll" class="columns">
+                
+                <div class="mc-field-group column is-one-third">
+                    <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+                    </label>
+                    <input type="email" value="" name="EMAIL" class="required email input is-rounded is-hovered is-width-4" id="mce-EMAIL">
+                </div>
+                <div class="mc-field-group column is-one-third">
+                    <label for="mce-FNAME">First Name </label>
+                    <input type="text" value="" name="FNAME" class="input is-rounded is-hovered is-width-4" id="mce-FNAME">
+                </div>
+                <div class="mc-field-group column is-one-third">
+                    <label for="mce-LNAME">Last Name </label>
+                    <input type="text" value="" name="LNAME" class="input is-rounded is-hovered is-width-4" id="mce-LNAME">
+                </div>
+                <div id="mce-responses" class="clear">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_cbf1ca733db13e75e82da3979_82afd47565" tabindex="-1" value=""></div>
+            </div>
+            <div class="has-text-centered" style="padding: 0 5%;"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button is-primary" style="width: auto;"></div>
+        </form>
+    </div>
+</section>
+    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<!--End mc_embed_signup-->
+
+   
+    <!-- .footer -->
+    <footer class="footer has-background-dark" style="padding: 20px 0 10px 30px;">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-1"></div>
+                <div class="column">
+                    <img src="images/vivant-logo-dark.png" width="120">
+                    <a href="/about">
+                        <p>About</p>
+                    </a>
+                    <a href="/">
+                        <p>Events</p>
+                    </a>
+                    <a href="/host">
+                        <p>For Hosts</p>
+                    </a>
+                    <a href="/host">
+                        <p>For Performers</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container has-background-dark"> 
+            <p class="has-text-grey has-text-centered">© 2020 Vivant Social, Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- /.footer -->
+
+
+</body>
+</html>
