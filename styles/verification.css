@@ -1,0 +1,48 @@
+.age-verification {
+  position: fixed;
+  background-color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  width: 60%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(50%);
+  transform: translateX(-50%) translateY(50%);
+  z-index: 3;
+  box-shadow: 1px 4px 4px gainsboro;
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .age-verification {
+    position: fixed;
+    background-color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    width: 60%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(50%);
+    transform: translateX(-50%) translateY(50%);
+    z-index: 3;
+    box-shadow: 1px 4px 4px gainsboro;
+  }
+}
+
+@media (max-width: 767px) {
+  .age-verification {
+    position: fixed;
+    background-color: white;
+    border-radius: 8px;
+    width: 60%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(50%);
+    transform: translateX(-50%) translateY(50%);
+    z-index: 3;
+    box-shadow: 1px 4px 4px gainsboro;
+  }
+  #age-verify-confirm {
+    width: 90%;
+  }
+  #age-verify-decline {
+    width: 90%;
+  }
+}
+
