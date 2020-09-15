@@ -13,6 +13,7 @@
       src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
     ></script>
     <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/verification.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Lato&family=Lato:wght@300&display=swap"
       rel="stylesheet"
@@ -174,6 +175,28 @@
   </head>
 
   <body>
+    <!-- Age Verification -->
+    <div id="age-verification" class="age-verification has-text-centered">
+        <h3 class="title">Age Verification</h3>
+        <p style="padding: 0 0 30px 0;">
+        By clicking enter, I certify that I am over the age of 21 and reside in
+        a state that allows the legal social consumption of cannabis.
+        </p>
+
+        <a href="#" class="button is-primary" id="age-verify-confirm">ENTER</a>
+
+        <p>Or</p>
+
+        <a
+        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        class="button is-danger is-outlined" id="age-verify-decline"
+        >EXIT</a
+        >
+    </div>
+    <div id="age-overlay" class="overlay"></div>
+
+    <!-- <div class="overlay-verify"></div> -->
+
     <!-- .header -->
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
