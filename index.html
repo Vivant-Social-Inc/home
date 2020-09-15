@@ -6,12 +6,14 @@
     <title>Welcome to Vivant: The Hub for All Things Social Cannabis</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <link rel="stylesheet" href="styles/styles.html">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/verification.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Lato:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/helpers.css">
     <link rel="stylesheet" href="styles/grid.css">
     <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-    
+    <link href='https://fonts.googleapis.com/css?family=Raleway:600,900,400' rel='stylesheet' type='text/css'>
+
     <!-- <link rel="stylesheet" href="styles/debug.css"> -->
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -132,7 +134,34 @@
 </head>
 
 
+
 <body>
+    <!-- Age Verification -->
+    <main>
+        <article class="box">
+            <div class="box-left">
+                <img src="http://uiclients.com/thinc/assets/images/thinc-drop-white.svg">
+                <p>THINC Pure products are only for use in states where the sale and consumption of such products are legal. </p>
+            </div>
+            <div class="box-right">
+                <h3>Age Verification</h3>
+                <p>By clicking enter, I certify that I am over the age of 21 and will comply with the above statement.</p>
+                
+                <a href="#" class="btn btn-alpha"  id="refresh-page">ENTER</a>
+                
+                <p class="decor-line"><span>Or</span></p>
+                
+                <a href="#" class="btn btn-beta" id="reset-session">EXIT</a>
+                
+                <small>Always enjoy responsibly.</small>
+            </div>
+            </div>
+        </article>
+      
+      <div class="overlay-verify"></div>
+    </main>
+
+    
     <!-- .header -->
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
