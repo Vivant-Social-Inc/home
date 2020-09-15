@@ -1,272 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome to Vivant: The Hub for All Things Social Cannabis</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <link rel="stylesheet" href="styles/styles.html">
-    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Lato:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/helpers.css">
-    <link rel="stylesheet" href="styles/grid.css">
-    <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-    
-    <!-- <link rel="stylesheet" href="styles/debug.css"> -->
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-   
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177217082-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/verification.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Lato:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/helpers.css" />
+    <link rel="stylesheet" href="styles/grid.css" />
+    <link
+      href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:600,900,400"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts/verification.js"></script>
 
-        gtag('config', 'UA-177217082-1');
+    <!-- <link rel="stylesheet" href="styles/debug.css"> -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-177217082-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-177217082-1");
     </script>
     <!-- END - Google Analytics -->
 
+   
+  </head>
 
-    <!-- CSS Styles -->
-    <style>
+  <body>
+    <!-- Age Verification -->
+    <div id="age-verification" class="age-verification has-text-centered">
+      <h3 class="title">Age Verification</h3>
+      <p style="padding: 0 0 30px 0;">
+        By clicking enter, I certify that I am over the age of 21 and reside in
+        a state that allows the legal social consumption of cannabis.
+      </p>
 
-/* Change hero text for desktop vs mobile */
-.hero-body {
-    background-color: black;
-}
+      <a href="#" class="button is-primary" id="age-verify-confirm">ENTER</a>
 
-@media screen and (max-width: 2024px) { 
-    .hero-body { 
-        background-color: black;
-    }
-    #about-hero { 
-            background-image: url('images/blue-orange-smoke.jpg');
-            background-size: cover;
-    }
-    #action-section { 
-            background-image: url('images/night-sky.jpg');
-            background-size: cover;
-    }
-    #stay-connected-section { 
-            /* background-image: url('images/night-sky.jpg'); */
-            background-size: cover;
-    }
-    #hero-column-1 {
-    background-color: black;
-    padding-left: 10%;
-    }
-    #hero-column-2 {
-        background-image: url('images/smoke-break.jpg');
-        background-size: cover;
-    }
-@media screen and (max-width: 768px) { 
-    .hero-body { background-image: url('images/smoke-break.jpg');}
-    #about-hero { background-image: url('images/blue-orange-smoke.jpg');}
-    #action-section { background-image: url('images/night-sky.jpg');}
-    /* #stay-connected-section { background-image: url('images/night-sky.jpg');} */
-    #hero-column-1 {
-    background: rgba(0, 0, 0, 0.0);
-    background-size: cover;
-    padding-left: 0%;
-    }
-    #hero-column-2 {
-        background: rgba(0, 0, 0, 0.0);
-        width: 0px; 
-    }
-}
+      <p>Or</p>
 
-.navbar-item {
-    color: white;
-    font-size: large;
-}
+      <a
+        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        class="button is-danger is-outlined" id="age-verify-decline"
+        >EXIT</a
+      >
+    </div>
+    <div id="age-overlay" class="overlay"></div>
 
-.title {
-    font-family: 'Lato', sans-serif;
-    font-weight: 800;
-}
+    <!-- <div class="overlay-verify"></div> -->
 
-/* #hero-text {
-    line-height: 7vw;
-    letter-spacing: 5px;
-    font-size: 30px;
-} */
-
-.button {
-    align-items: center;
-    width: 20rem;
-    font-size: 20px;
-    font-family: 'Lato', sans-serif;
-}
-
-.button:hover {
-    background-color: rgb(224, 223, 223);
-}
-
-#hero-text-mid {
-    color: rgb(0, 197, 126);
-}
-
-#navbar-logo {
-    padding: 0 0.75rem 0 0.75rem; 
-}
-
-#top-login {
-    width: auto;
-    font-size: 16px;
-}
-
-#top-get-started {
-    width: auto;
-    font-size: 16px;
-}
-
-#form-submit {
-    width: auto;
-    font-size: 16px;
-}
-    </style>
-
-
-
-</head>
-
-
-<body>
     <!-- .header -->
     <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <div class="navbar-item" width="5%"></div>
-            <a class="navbar-item" href="http://www.vivant.social/" id="navbar-logo">
-                <img src="images/vivant-logo-white.png" height="100%">
-            </a>
-        
-            <div role="button" class="navbar-burger burger"onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </div>
-        </div>
-        
-        <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-start">
-                <div class="navbar-item"></div>
-            </div>
-            <div class="navbar-item desktop" style="width: 40%;">
-                <div class="field" style="width: 90%;">
-                    <p class="control has-icons-left has-icons-right">
-                        <input class="input" type="text" placeholder="Search Events..." width="250">
-                        <span class="icon is-small is-left">
-                            <i class="fas fa-search"></i>
-                        </span>
-                    </p>
-                </div>
-            </div>   
+      <div class="navbar-brand">
+        <div class="navbar-item" width="5%"></div>
+        <a
+          class="navbar-item"
+          href="http://www.vivant.social/"
+          id="navbar-logo"
+        >
+          <img src="images/vivant-logo-white.png" height="100%" />
+        </a>
 
-            <div class="navbar-end">
-                <a href="http://www.vivant.social/about.html" class="navbar-item has-text-black">About</a>
-                <a class="navbar-item has-text-black" href="#stay-connected-section">Events</a>
-                <a class="navbar-item has-text-black" href="http://www.vivant.social/host.html">Host</a> 
-                <div class="navbar-item">
-                    <div class="buttons">
-                        <a class="button is-light" id="top-login" href="#stay-connected-section">
-                            Log in
-                        </a>
-                        <a class="button is-primary" id="top-get-started" href="#stay-connected-section">
-                            <strong>Get Started</strong>
-                        </a>
-                    </div>
-                </div>
-                <div class="navbar-item" width="5%"></div>
-            </div>
+        <div
+          role="button"
+          class="navbar-burger burger"
+          onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
         </div>
+      </div>
+
+      <div id="navbar" class="navbar-menu">
+        <div class="navbar-start">
+          <div class="navbar-item"></div>
+        </div>
+        <div class="navbar-item desktop" style="width: 40%">
+          <div class="field" style="width: 90%">
+            <p class="control has-icons-left has-icons-right">
+              <input
+                class="input"
+                type="text"
+                placeholder="Search Events..."
+                width="250"
+              />
+              <span class="icon is-small is-left">
+                <i class="fas fa-search"></i>
+              </span>
+            </p>
+          </div>
+        </div>
+
+        <div class="navbar-end">
+          <a
+            href="http://www.vivant.social/about.html"
+            class="navbar-item has-text-black"
+            >About</a
+          >
+          <a class="navbar-item has-text-black" href="#stay-connected-section"
+            >Events</a
+          >
+          <a
+            class="navbar-item has-text-black"
+            href="http://www.vivant.social/host.html"
+            >Host</a
+          >
+          <div class="navbar-item">
+            <div class="buttons">
+              <a
+                class="button is-light"
+                id="top-login"
+                href="#stay-connected-section"
+              >
+                Log in
+              </a>
+              <a
+                class="button is-primary"
+                id="top-get-started"
+                href="#stay-connected-section"
+              >
+                <strong>Get Started</strong>
+              </a>
+            </div>
+          </div>
+          <div class="navbar-item" width="5%"></div>
+        </div>
+      </div>
     </nav>
     <!-- /.header -->
 
-
     <!-- .hero -->
     <section class="hero is-large">
-        <div class="hero-body" style="padding: 0 24px 24px 24px;">
-            <div class="columns">
-                <div class="column" id="hero-column-1">
-                    <h2 class="title has-text-white-ter is-2" style="top: 10%; left: 20%px;padding-top: 10%;">THE SOURCE OF ALL</h1> 
-                    <h1 class="title is-1" id="hero-text-mid" style="margin: -18.75px 0 0 0;">CANNABIS FRIENDLY</h1>
-                    <h2 class="title has-text-white-ter is-2" >EVENTS</h1>
-                    <h3 class="subtitle has-text-grey-light" id="hero-subtitle" style="margin: 0 0 30px 0;">Connecting you to the best social consumption spots in Denver</h2>
-                    <a class="button is-primary" href="#stay-connected-section">
-                        <strong>Coming Soon</strong>
-                    </a>
-                </div>
-                <div class="column desktop" id="hero-column-2">
-                    <!-- <img src="images/smoke-break.jpg"> -->
-                </div>
-            </div>
+      <div class="hero-body" style="padding: 0 24px 24px 24px">
+        <div class="columns">
+          <div class="column" id="hero-column-1">
+            <h1>
+              <span
+                class="title has-text-white-ter is-2"
+                style="top: 10%; left: 20%px; padding-top: 10%"
+                >THE SOURCE OF ALL</span
+              ><span
+                class="title is-1"
+                id="hero-text-mid"
+                style="margin: -18.75px 0 0 0"
+                >CANNABIS FRIENDLY</span
+              ><span class="title has-text-white-ter is-2">EVENTS</span>
+            </h1>
+            <h3
+              class="subtitle has-text-grey-light"
+              id="hero-subtitle"
+              style="margin: 0 0 30px 0"
+            >
+              Connecting you to the best social consumption spots in Denver
+            </h3>
+            <a class="button is-primary" href="#stay-connected-section">
+              <strong>Coming Soon</strong>
+            </a>
+          </div>
+          <div class="column desktop" id="hero-column-2">
+            <img src="images/smoke-break.jpg">
+          </div>
         </div>
+      </div>
     </section>
     <!-- /.hero -->
 
-
     <!-- . coming soon -->
     <section class="section">
-        <div class="container has-text-centered">
-            <h1 class="title is-size-2 has-text-centered">COMING SOON!</h1>
-            <div class="content is-medium notification" style="align-items: center;">
-                <p class="content">Vivant is currently in the process of building our ecosystem and our products. We expect to start delivering world class social consumption events in 2021. Stay tuned!</p>
-            </div>
-            <a href="#stay-connected-section" class="button is-primary">Stay Connected</a>
+      <div class="container has-text-centered">
+        <h1 class="title is-size-2 has-text-centered">COMING SOON!</h1>
+        <div class="content is-medium notification" style="align-items: center">
+          <p class="content">
+            Vivant is currently in the process of building our ecosystem and our
+            products. We expect to start delivering world class social
+            consumption events in 2021. Stay tuned!
+          </p>
         </div>
+        <a href="#stay-connected-section" class="button is-primary"
+          >Stay Connected</a
+        >
+      </div>
     </section>
     <!-- /.coming soon -->
 
-
     <!-- .about -->
     <section class="section has-background-dark">
-        <div class="container">
-            <div class="columns">
-                <div class="column is-1"></div>
-                <div class="column">
-                    <h2 class="title is-size-2" style="color: rgb(0, 197, 126);">Live Events, Social Consumption</h2>
-                    <p class="content is-medium has-text-white">We are working hard and teaming up with the best venues and performers to bring you all the latest cannabis-friendly events and deals across Denver. Join our mailing list to stay up to date on our progress!</p>
-                    <div class="container has-text-centered">
-                        <a href="#stay-connected-section" class="button is-outlined">Connect with Us</a>
-                    </div>
-                </div>
-                <div class="column">
-                    <figure class="image center desktop">
-                        <img src="images/original-size-rocker-boy-2.png" style="max-width: 500px;">
-                    </figure>
-                </div>
-                <div class="column is-1"></div>
+      <div class="container">
+        <div class="columns">
+          <div class="column is-1"></div>
+          <div class="column">
+            <h2 class="title is-size-2" style="color: rgb(0, 197, 126)">
+              Live Events, Social Consumption
+            </h2>
+            <p class="content is-medium has-text-white">
+              We are working hard and teaming up with the best venues and
+              performers to bring you all the latest cannabis-friendly events
+              and deals across Denver. Join our mailing list to stay up to date
+              on our progress!
+            </p>
+            <div class="container has-text-centered">
+              <a href="#stay-connected-section" class="button is-outlined"
+                >Connect with Us</a
+              >
             </div>
+          </div>
+          <div class="column">
+            <figure class="image center desktop">
+              <img
+                src="images/original-size-rocker-boy-2.png"
+                style="max-width: 500px"
+              />
+            </figure>
+          </div>
+          <div class="column is-1"></div>
         </div>
+      </div>
     </section>
     <!-- /.about  -->
 
-
     <!-- .host -->
     <section class="section has-background-light">
-        <div class="container">
-            <div class="columns">
-                <div class="column is-1"></div>
-                <div class="column">
-                    <figure class="image center desktop">
-                        <img src="images/festival-girl.PNG" style="max-width: 500px;">
-                    </figure>
-                </div>
-                <div class="column">
-                    <h2 class="title is-size-2 has-text-black">Want to Host an Event? We can Help.</h2>
-                    <p class="content is-medium">Our partners know all the ins and outs of getting set up as a cannabis event space. We will provide support with everything from compliance to ticketing to marketing. Join our growing network of locations, performers, and attendees!</p>
-                    <div class="container has-text-centered">
-                        <a href="http://www.vivant.social/host.html" class="button is-primary">Host an Event</a>
-                    </div>
-                </div>
-                <div class="column is-1"></div>
+      <div class="container">
+        <div class="columns">
+          <div class="column is-1"></div>
+          <div class="column">
+            <figure class="image center desktop">
+              <img src="images/festival-girl.PNG" style="max-width: 500px" />
+            </figure>
+          </div>
+          <div class="column">
+            <h2 class="title is-size-2 has-text-black">
+              Want to Host an Event? We can Help.
+            </h2>
+            <p class="content is-medium">
+              Our partners know all the ins and outs of getting set up as a
+              cannabis event space. We will provide support with everything from
+              compliance to ticketing to marketing. Join our growing network of
+              locations, performers, and attendees!
+            </p>
+            <div class="container has-text-centered">
+              <a
+                href="http://www.vivant.social/host.html"
+                class="button is-primary"
+                >Host an Event</a
+              >
             </div>
+          </div>
+          <div class="column is-1"></div>
         </div>
+      </div>
     </section>
     <!-- /.host  -->
-
-
 
     <!-- .stay connected. Hidden because of MailChimp input  -->
     <!-- <section class="section" id="stay-connected-section">
@@ -310,81 +329,134 @@
     <!-- /.stay connected -->
 
     <!-- Stay Connected Section -->
-<section class="section" id="stay-connected-section">
-    <div class="container has-text-centered">
-        <h1 class="title is-size-2 has-text-centered has-text-dark">STAY CONNECTED</h1>
-        <p class="content is-medium has-text-dark">We are a young & fast moving cannabis startup and can’t wait to launch with the most premiere cannabis events in the world.</p>
-        <p class="paragraph is-size-5 has-text-dark">Sign Up for Early Access to Exclusive Cannabis Events and Deals</p>
-        <p class="paragraph is-size-6 has-text-dark">For Partnerships: <a href="mailto: Info@Vivant.social">Info@Vivant.social</a></p>
-    </div>
-    <br>
+    <section class="section" id="stay-connected-section">
+      <div class="container has-text-centered">
+        <h1 class="title is-size-2 has-text-centered has-text-dark">
+          STAY CONNECTED
+        </h1>
+        <p class="content is-medium has-text-dark">
+          We are a young & fast moving cannabis startup and can’t wait to launch
+          with the most premiere cannabis events in the world.
+        </p>
+        <p class="paragraph is-size-5 has-text-dark">
+          Sign Up for Early Access to Exclusive Cannabis Events and Deals
+        </p>
+        <p class="paragraph is-size-6 has-text-dark">
+          For Partnerships:
+          <a href="mailto: Info@Vivant.social">Info@Vivant.social</a>
+        </p>
+      </div>
+      <br />
 
-    <!-- Begin Mailchimp Signup Form -->
-    <div class="container" style="padding: 0 10%;">
-        <form action="https://social.us17.list-manage.com/subscribe/post?u=cbf1ca733db13e75e82da3979&amp;id=82afd47565" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-            <div class="columns">
-                <div class="column is-one-third">
-                    <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
-                </label>
-                    <input type="email" value="" name="EMAIL" class="input required email is-rounded is-hovered is-width-4"" id="mce-EMAIL">
-                </div>
-                <div class="column is-one-third">
-                    <label for="mce-FNAME">First Name </label>
-                    <input type="text" value="" name="FNAME" class="input is-rounded is-hovered is-width-4" id="mce-FNAME">
-                </div>
-                <div class="column is-one-third">
-                    <label for="mce-LNAME">Last Name </label>
-                    <input type="text" value="" name="LNAME" class="input is-rounded is-hovered is-width-4" id="mce-LNAME">
-                </div>
+      <!-- Begin Mailchimp Signup Form -->
+      <div class="container" style="padding: 0 10%">
+        <form
+          action="https://social.us17.list-manage.com/subscribe/post?u=cbf1ca733db13e75e82da3979&amp;id=82afd47565"
+          method="post"
+          id="mc-embedded-subscribe-form"
+          name="mc-embedded-subscribe-form"
+          class="validate"
+          target="_blank"
+          novalidate
+        >
+          <div class="columns">
+            <div class="column is-one-third">
+              <label for="mce-EMAIL"
+                >Email Address <span class="asterisk">*</span>
+              </label>
+              <input type="email" value="" name="EMAIL" class="input required
+              email is-rounded is-hovered is-width-4"" id="mce-EMAIL">
             </div>
-            <div class="container has-text-centered">
-                <div id="mce-responses" class="clear">
-                    <div class="response" id="mce-error-response" style="display:none"></div>
-                    <div class="response" id="mce-success-response" style="display:none"></div>
-                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_cbf1ca733db13e75e82da3979_82afd47565" tabindex="-1" value=""></div>
-                <br>
-                <div class="clear"><input type="submit" value="Submit" name="subscribe" class="button is-primary" style="width: 250px;"></div>
+            <div class="column is-one-third">
+              <label for="mce-FNAME">First Name </label>
+              <input
+                type="text"
+                value=""
+                name="FNAME"
+                class="input is-rounded is-hovered is-width-4"
+                id="mce-FNAME"
+              />
             </div>
+            <div class="column is-one-third">
+              <label for="mce-LNAME">Last Name </label>
+              <input
+                type="text"
+                value=""
+                name="LNAME"
+                class="input is-rounded is-hovered is-width-4"
+                id="mce-LNAME"
+              />
+            </div>
+          </div>
+          <div class="container has-text-centered">
+            <div id="mce-responses" class="clear">
+              <div
+                class="response"
+                id="mce-error-response"
+                style="display: none"
+              ></div>
+              <div
+                class="response"
+                id="mce-success-response"
+                style="display: none"
+              ></div>
+            </div>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px" aria-hidden="true">
+              <input
+                type="text"
+                name="b_cbf1ca733db13e75e82da3979_82afd47565"
+                tabindex="-1"
+                value=""
+              />
+            </div>
+            <br />
+            <div class="clear">
+              <input
+                type="submit"
+                value="Submit"
+                name="subscribe"
+                class="button is-primary"
+                style="width: 250px"
+              />
+            </div>
+          </div>
         </form>
-    </div>
-</section>
-<!--End mc_embed_signup-->
+      </div>
+    </section>
+    <!--End mc_embed_signup-->
 
-
-
-
-   
     <!-- .footer -->
-    <footer class="footer has-background-dark" style="padding: 20px 0 10px 30px;">
-        <div class="container">
-            <div class="columns">
-                <div class="column is-1"></div>
-                <div class="column">
-                    <img src="images/vivant-logo-dark.png" width="120">
-                    <a href="http://www.vivant.social/about.html">
-                        <p>About</p>
-                    </a>
-                    <a href="http://www.vivant.social/">
-                        <p>Events</p>
-                    </a>
-                    <a href="http://www.vivant.social/host.html">
-                        <p>For Hosts</p>
-                    </a>
-                    <a href="http://www.vivant.social/host.html">
-                        <p>For Performers</p>
-                    </a>
-                </div>
-            </div>
+    <footer
+      class="footer has-background-dark"
+      style="padding: 20px 0 10px 30px"
+    >
+      <div class="container">
+        <div class="columns">
+          <div class="column is-1"></div>
+          <div class="column">
+            <img src="images/vivant-logo-dark.png" width="120" />
+            <a href="http://www.vivant.social/about.html">
+              <p>About</p>
+            </a>
+            <a href="http://www.vivant.social/">
+              <p>Events</p>
+            </a>
+            <a href="http://www.vivant.social/host.html">
+              <p>For Hosts</p>
+            </a>
+            <a href="http://www.vivant.social/host.html">
+              <p>For Performers</p>
+            </a>
+          </div>
         </div>
-        <div class="container has-background-dark"> 
-            <p class="has-text-grey has-text-centered">© 2020 Vivant Social, Inc. All Rights Reserved.</p>
-        </div>
+      </div>
+      <div class="container has-background-dark">
+        <p class="has-text-grey has-text-centered">
+          © 2020 Vivant Social, Inc. All Rights Reserved.
+        </p>
+      </div>
     </footer>
     <!-- /.footer -->
-
-
-</body>
+  </body>
 </html>
-
- 
