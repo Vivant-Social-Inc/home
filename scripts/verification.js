@@ -1,20 +1,16 @@
-jQuery(document).ready(function($){
+$(document).ready(() => {
+  function makeSiteUsable() {
+    $("#age-verification").hide();
+    $("#age-overlay").css("display", "none");
+    $(".navbar").css("visibility", "visible");
+  }
 
-    if (sessionStorage.getItem('advertOnce') !== 'true') {
-    //sessionStorage.setItem('advertOnce','true');
-      $('.box').show();
-    }else{
-      $('.box').hide();
-    }
-     
-    $('#refresh-page').on('click',function(){
-    $('.box').hide();
-    sessionStorage.setItem('advertOnce','true');
-    });
-      
-    $('#reset-session').on('click',function(){
-    $('.box').show();
-    sessionStorage.setItem('advertOnce','');
-    });
-     
-    });
+  if (sessionStorage.getItem("ageVerification") === "true") {
+    makeSiteUsable();
+  }
+
+  $("#age-verify-confirm").click(() => {
+    makeSiteUsable();
+    sessionStorage.setItem("ageVerification", "true");
+  });
+});
