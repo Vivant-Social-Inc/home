@@ -119,3 +119,11 @@ font-size: 30px;
 .navbar {
     visibility: hidden;
 }
+
+a {
+    color: rgb(0, 197, 126);
+}
+
+a:hover {
+    color: rgb(2, 122, 78);
+}
